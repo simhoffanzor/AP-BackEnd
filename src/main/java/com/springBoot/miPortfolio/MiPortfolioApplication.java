@@ -18,7 +18,7 @@ public class MiPortfolioApplication {
             return new WebMvcConfigurer(){
                 @Override
                 public void addCorsMappings(CorsRegistry registry){
-                    registry.addMapping("/**").allowedOrigins("http://localhost:4200/").allowedHeaders("*").allowedMethods("*");
+                    registry.addMapping("/**").allowedOrigins("https://mi-portfolio-f6a2e.web.app/").allowedHeaders("*").allowedMethods("*");
                     
                 }
             };
