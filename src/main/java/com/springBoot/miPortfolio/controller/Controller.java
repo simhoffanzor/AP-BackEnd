@@ -27,22 +27,22 @@ public class Controller {
     @Autowired
     private IEstudioService estudioServ;
     
-    @PostMapping("/newEstudio")
+    @PostMapping("/estudio")
     public void agregarEstudio(@RequestBody Estudio est){
         estudioServ.crearEstudio(est);
     }
     
-    @GetMapping("/verEstudios")
+    @GetMapping("/estudio")
     public List<Estudio> verEstudios(){
         return estudioServ.verEstudios();
     }
     
-    @DeleteMapping("/eliminarEstudio/{id}")
+    @DeleteMapping("/estudio/{id}")
     public void borrarEstudio(@PathVariable Long id){
         estudioServ.borrarEstudio(id);
     }
     
-    @PutMapping("/editarEstudio/{id}")
+    @PutMapping("/estudio/{id}")
     public void editarEstudio(@PathVariable Long id,
                               @RequestBody Estudio estudioFinal){
         Estudio estudioEditar=estudioServ.traerEstudio(id);
@@ -59,22 +59,22 @@ public class Controller {
     @Autowired
     private IProyectoService proyectoServ;
     
-    @PostMapping("/newProyecto")
+    @PostMapping("/proyecto")
     public void agregarProyecto(@RequestBody Proyecto proy){
         proyectoServ.crearProyecto(proy);
     }
     
-    @GetMapping("/verProyectos")
+    @GetMapping("/proyecto")
     public List<Proyecto> verProyectos(){
         return proyectoServ.verProyectos();
     }
     
-    @DeleteMapping("/eliminarProyecto/{id}")
+    @DeleteMapping("/proyecto/{id}")
     public void borrarProyecto(@PathVariable Long id){
         proyectoServ.borrarProyecto(id);
     }
     
-    @PutMapping("/editarProyecto/{id}")
+    @PutMapping("/proyecto/{id}")
     public void editarProyecto(@PathVariable Long id,
                               @RequestBody Proyecto proyectoFinal){
         Proyecto proyectoEditar=proyectoServ.traerProyecto(id);
@@ -91,22 +91,22 @@ public class Controller {
     @Autowired
     private ISkillService skillServ;
     
-    @PostMapping("/newSkill")
+    @PostMapping("/skill")
     public void agregarSkill(@RequestBody Skill ski){
         skillServ.crearSkill(ski);
     }
     
-    @GetMapping("/verSkills")
+    @GetMapping("/skill")
     public List<Skill> verSkills(){
         return skillServ.verSkills();
     }
     
-    @DeleteMapping("/eliminarSkill/{id}")
+    @DeleteMapping("/skill/{id}")
     public void borrarSkill(@PathVariable Long id){
         skillServ.borrarSkill(id);
     }
     
-    @PutMapping("/editarSkill/{id}")
+    @PutMapping("/skill/{id}")
     public void editarSkill(@PathVariable Long id,
                             @RequestBody Skill skillFinal){
         Skill skillEditar=skillServ.traerSkill(id);
@@ -121,22 +121,22 @@ public class Controller {
     @Autowired
     private ITrabajoService trabajoServ;
     
-    @PostMapping("/newTrabajo")
+    @PostMapping("/trabajo")
     public void agregarTrabajo(@RequestBody Trabajo tra){
         trabajoServ.crearTrabajo(tra);
     }
     
-    @GetMapping("/verTrabajos")
+    @GetMapping("/trabajo")
     public List<Trabajo> verTrabajos(){
         return trabajoServ.verTrabajos();
     }
     
-    @DeleteMapping("/eliminarTrabajo/{id}")
+    @DeleteMapping("/trabajo/{id}")
     public void borrarTrabajo(@PathVariable Long id){
         trabajoServ.borrarTrabajo(id);
     }
     
-    @PutMapping("/editarTrabajo/{id}")
+    @PutMapping("/trabajo/{id}")
     public void editarTrabajo(@PathVariable Long id,
                               @RequestBody Trabajo trabajoFinal){
         Trabajo trabajoEditar=trabajoServ.traerTrabajo(id);
@@ -154,22 +154,22 @@ public class Controller {
     @Autowired
     private IUsuarioService usuarioServ;
     
-    @PostMapping("/newUsuario")
+    @PostMapping("/usuario")
     public void agregarUsuario(@RequestBody Usuario usu){
         usuarioServ.crearUsuario(usu);
     }
     
-    @GetMapping("/verUsuario")
+    @GetMapping("/usuario")
     public List<Usuario> verUsuario(){
         return usuarioServ.verUsuario();
     }
     
-    @DeleteMapping("/eliminarUsuario/{id}")
+    @DeleteMapping("/usuario/{id}")
     public void borrarUsuario(@PathVariable Long id){
         usuarioServ.borrarUsuario(id);
     }
     
-    @PutMapping("/editarUsuario/{id}")
+    @PutMapping("/usuario/{id}")
     public void editarUsuario(@PathVariable Long id,
                               @RequestBody Usuario usuarioFinal){
         Usuario usuarioEditar=usuarioServ.traerUsuario(id);
