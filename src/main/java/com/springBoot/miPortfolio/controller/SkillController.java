@@ -1,7 +1,7 @@
 package com.springBoot.miPortfolio.controller;
 
 import com.springBoot.miPortfolio.model.Skill;
-import com.springBoot.miPortfolio.service.ISkillService;
+import com.springBoot.miPortfolio.service.SkillService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +19,7 @@ public class SkillController {
     
     //MÉTODOS DE "SKILL"
     @Autowired
-    private ISkillService skillServ;
+    private SkillService skillServ;
     
     @PostMapping
     public void agregarSkill(@RequestBody Skill ski){

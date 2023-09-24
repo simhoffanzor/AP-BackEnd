@@ -1,40 +1,18 @@
 package com.springBoot.miPortfolio.service;
 
 import com.springBoot.miPortfolio.model.Usuario;
-import com.springBoot.miPortfolio.repository.UsuarioRepository;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class UsuarioService implements IUsuarioService{
+public interface UsuarioService {
     
-    @Autowired
-    public UsuarioRepository usuarioRepo;
+    public List<Usuario> verUsuario();
     
-    @Override
-    public List<Usuario> verUsuario() {
-        return usuarioRepo.findAll();
-    }
-
-    @Override
-    public void crearUsuario(Usuario usu) {
-        usuarioRepo.save(usu);
-    }
-
-    @Override
-    public void borrarUsuario(Long id) {
-        usuarioRepo.deleteById(id);
-    }
-
-    @Override
-    public Usuario buscarUsuario(Long id) {
-        return usuarioRepo.findById(id).orElse(null);
-    }
-
-    @Override
-    public Usuario traerUsuario(Long id) {
-        return usuarioRepo.getById(id);
-    }
+    public void crearUsuario(Usuario usu);
+    
+    public void borrarUsuario(Long id);
+    
+    public Usuario buscarUsuario(Long id);
+    
+    public Usuario traerUsuario(Long id);
     
 }

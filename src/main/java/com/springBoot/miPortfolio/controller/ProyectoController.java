@@ -1,7 +1,7 @@
 package com.springBoot.miPortfolio.controller;
 
 import com.springBoot.miPortfolio.model.Proyecto;
-import com.springBoot.miPortfolio.service.IProyectoService;
+import com.springBoot.miPortfolio.service.ProyectoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +19,7 @@ public class ProyectoController {
     
     //MÉTODOS DE "PROYECTO"
     @Autowired
-    private IProyectoService proyectoServ;
+    private ProyectoService proyectoServ;
     
     @PostMapping
     public void agregarProyecto(@RequestBody Proyecto proy){

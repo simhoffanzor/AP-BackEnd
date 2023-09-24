@@ -1,7 +1,7 @@
 package com.springBoot.miPortfolio.controller;
 
 import com.springBoot.miPortfolio.model.Trabajo;
-import com.springBoot.miPortfolio.service.ITrabajoService;
+import com.springBoot.miPortfolio.service.TrabajoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +19,7 @@ public class TrabajoController {
     
     //MÉTODOS DE "TRABAJO"
     @Autowired
-    private ITrabajoService trabajoServ;
+    private TrabajoService trabajoServ;
     
     @PostMapping
     public void agregarTrabajo(@RequestBody Trabajo tra){

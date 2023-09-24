@@ -1,7 +1,7 @@
 package com.springBoot.miPortfolio.controller;
 
 import com.springBoot.miPortfolio.model.Estudio;
-import com.springBoot.miPortfolio.service.IEstudioService;
+import com.springBoot.miPortfolio.service.EstudioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +19,7 @@ public class EstudioController {
     
     //MÉTODOS DE "ESTUDIO"
     @Autowired
-    private IEstudioService estudioServ;
+    private EstudioService estudioServ;
     
     @PostMapping
     public void agregarEstudio(@RequestBody Estudio est){

@@ -1,7 +1,7 @@
 package com.springBoot.miPortfolio.controller;
 
 import com.springBoot.miPortfolio.model.Usuario;
-import com.springBoot.miPortfolio.service.IUsuarioService;
+import com.springBoot.miPortfolio.service.UsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +19,7 @@ public class UsuarioController {
 
     //MÉTODOS DE "USUARIO"
     @Autowired
-    private IUsuarioService usuarioServ;
+    private UsuarioService usuarioServ;
     
     @PostMapping
     public void agregarUsuario(@RequestBody Usuario usu){
